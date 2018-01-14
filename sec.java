@@ -15,6 +15,13 @@ public class sec extends JFrame {
 	private JButton kelfar;
 	private JButton celkel;
 	private JButton kelcel;
+	private JButton farran;
+	private JButton ranfar;
+	private JButton celran;
+	private JButton rancel;
+	private JButton kelran;
+	private JButton rankel;
+	
 	private double num2;
 	private double x;
 	private BigDecimal bog1,bog2, bog3, bog4;
@@ -32,21 +39,30 @@ public class sec extends JFrame {
 
 		
 	
-		farcel = new JButton("캟 to 캜");
+		farcel = new JButton("째F to 째C");
 		add(farcel);
-		celfar = new JButton("캜 to 캟");
+		celfar = new JButton("째C to 째F");
 		add(celfar);
-		farkel = new JButton("캟 to 캩");
+		farkel = new JButton("째F to 째K");
 		add(farkel);
-		kelfar = new JButton("K� to 캟");
+		kelfar = new JButton("K째 to 째F");
 		add(kelfar);
-		celkel = new JButton("캜 to 캩");
+		celkel = new JButton("째C to 째K");
 		add(celkel);
-		kelcel = new JButton("캩 to 캜");
+		kelcel = new JButton("째K to 째C");
 		add(kelcel);
-		
-		
-		
+		farran = new JButton("째F to 째R");
+		add(farran);
+		ranfar = new JButton("째R to 째F");
+		add(ranfar);
+		celran = new JButton("째C to 째R");
+		add(celran);
+		rancel = new JButton("째R to 째C");
+		add(rancel);
+		kelran = new JButton("째K to 째R");
+		add(kelran);
+		rankel = new JButton("째R to 째K");
+		add(rankel);
 		Yay way = new Yay();
 		farcel.addActionListener(way);
 		celfar.addActionListener(way);
@@ -54,7 +70,12 @@ public class sec extends JFrame {
 		kelfar.addActionListener(way);
 		celkel.addActionListener(way);
 		kelcel.addActionListener(way);
-		
+		farran.addActionListener(way);
+		ranfar.addActionListener(way);
+		celran.addActionListener(way);
+		rancel.addActionListener(way);
+		kelran.addActionListener(way);
+		rankel.addActionListener(way);
 		
 	}
 	private class Yay implements ActionListener{
@@ -70,7 +91,7 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째F is %2f 째C", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 				
 			}else if(wow.getSource()==celfar) {
@@ -80,7 +101,7 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째C is %2f 째F", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 			}else if(wow.getSource()==farkel) {
 				num2 = Double.parseDouble(num1.getText());
@@ -89,7 +110,7 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째F is %2f 째K", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 				
 			}else if(wow.getSource()==kelfar) {
@@ -99,7 +120,7 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째K is %2f 째F", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 				
 			}else if(wow.getSource()==celkel) {
@@ -109,7 +130,7 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째C is %2f 째K", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 				
 			}else if(wow.getSource()==kelcel) {
@@ -119,7 +140,66 @@ public class sec extends JFrame {
 				bog2 = new BigDecimal(x);
 				bog3 = bog1.stripTrailingZeros();
 				bog4 = bog2.stripTrailingZeros();
-				String h = String.format("%2f 캟 is %2f 캜", bog3, bog4);
+				String h = String.format("%2f 째K is %2f 째C", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+				
+			}else if(wow.getSource()==farran) {
+				num2 = Double.parseDouble(num1.getText());
+				x = ftor(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째F is %2f 째R", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+			}else if(wow.getSource()==ranfar) {
+				num2 = Double.parseDouble(num1.getText());
+				x = rtof(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째R is %2f 째F", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+				
+			}else if(wow.getSource()==celran) {
+				num2 = Double.parseDouble(num1.getText());
+				x = ctor(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째C is %2f 째R", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+				
+			}else if(wow.getSource()==rancel) {
+				num2 = Double.parseDouble(num1.getText());
+				x = rtoc(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째R is %2f 째C", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+				
+			}else if(wow.getSource()==kelran) {
+				num2 = Double.parseDouble(num1.getText());
+				x = ktor(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째K is %2f 째R", bog3, bog4);
+				JOptionPane.showMessageDialog(null,h);
+				
+			}else if(wow.getSource()==rankel) {
+				num2 = Double.parseDouble(num1.getText());
+				x = rtok(num2);
+				bog1 = new BigDecimal(num2);
+				bog2 = new BigDecimal(x);
+				bog3 = bog1.stripTrailingZeros();
+				bog4 = bog2.stripTrailingZeros();
+				String h = String.format("%2f 째R is %2f 째K", bog3, bog4);
 				JOptionPane.showMessageDialog(null,h);
 				
 			}
@@ -138,15 +218,40 @@ public class sec extends JFrame {
 		return b;
 	}
 	public double ktoc(double num){
-		double b = Math.round((num-273.15)*100)/100.0;	
+		double b = Math.round(((num-273.15))*100)/100.0;	
 		return b;
 	}
 	public double ftok(double num){
-		double b = Math.round((num+457.67)*100)/100.0;
+		double b = Math.round((num+457.67)*5/9*100)/100.0;
 		return b;
 	}
 	public double ktof(double num){
-		double b = Math.round((num-457.67)*100)/100.0;
+		double b = Math.round((num-457.67)*5/9*100)/100.0;
+		return b;
+	}
+	public double ftor(double num){
+		double b = Math.round((num+459.67)*100)/100.0;
+		return b;
+	}
+	public double rtof(double num){
+		double b = Math.round((num-459.67)*100)/100.0;
+		return b;
+	}
+	public double ctor(double num){
+		double b = Math.round((num+273.15)*9/5*100)/100.0;
+		return b;
+	}
+	public double rtoc(double num){
+		double b = Math.round((num-491.67)*100)/100.0;
+		return b;
+	}
+	public double ktor(double num){
+		double b = Math.round(num*9/5*100)/100.0;
+		return b;
+	}
+	public double rtok(double num){
+		double b = Math.round(num*5/9*100)/100.0;
 		return b;
 	}
 }
+
